@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameControlsComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  interval() {
+    setInterval(this.generateNumber, 1000)
+  }
+
+  stopInterval() {
+    clearInterval()
+  }
+
+  generateNumber() {
+    console.log(Math.floor(Math.random() * 1000))
+  }
+
+  onStart() {
+    this.interval();
+  }
+
+  onStop() {
+    clearInterval()
   }
 
 }
