@@ -20,6 +20,7 @@ export class GameControlsComponent implements OnInit {
 
   stopInterval() {
     clearInterval()
+
   }
 
   generateNumber() {
